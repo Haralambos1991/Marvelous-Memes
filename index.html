@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Group 7 Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Michroma|Rubik+Mono+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+</head>
+
+<body>
+    <main>
+        <div class='container col-12'>
+            <div class='jumbotron'>
+                <img style="width:100%" src="assets/images/marvelous_memes_logo.gif">
+            </div>
+        </div>
+    </main>
+
+    <!--Initial Mode Div::Section to upload photos from API -->
+    <div id="initial-mode" class="container">
+        <div class='row'>
+            <div class='col-12'>
+                <p><strong>Selection Mode: </strong>Click on a Marvel character below to begin generating your meme</p>
+                <button id="refresh" value="submit">Click this button for more Marvelous characters</button>
+            </div>
+        </div>
+        <div class="row" id="photos-to-meme">
+            <!--Dynamically append photos with attributes of col-sm-2-->
+        </div>
+    </div>
+
+    <!--Edit Mode Div :: Section to display the user's selected image to edit-->
+    <div id="edit-mode" class="container">
+        <hr>
+        <div class='col-12'>
+            <p><strong>Edit Mode: </strong>Add text and text-to-speech elements to your meme.</p>
+        </div>
+        <div class="row">
+            <div id="photo-to-edit" class="col-sm-12 col-lg-6 text-center">
+                <!--Dynamically append single photo with class attributes of 'col-sm-12 col-lg-6'-->
+            </div>
+            <div id="meme-text" class="col-sm-12 col-lg-6">
+
+                <!--Add button to preview text-to-speech and another text area and button to add Meme text content-->
+                <form>
+                    <textarea id="meme-text-to-speak" class="meme-input form-control" rows="4"></textarea>
+                    <br>
+                    <button id="speak-entered-text" class="btn-block">Text-to-Speech Preview</button>
+                    <button id="save-meme" class="submit btn-block">Generate Meme</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Share Mode Div :: Section to display the user's generated meme-->
+    <div id="share-mode" class="container">
+        <hr>
+        <div class="row">
+            <div class='col-12'>
+                <p><strong>Share Mode: </strong>Copy your meme's unique URL and share it on your social media.</p>
+            </div>
+            <!--Dynamically append character info and url for more info on the character here-->
+            <div id="learn-more" class="col-md-6 offset-md-3 text-center">
+                <p><strong>Marvel Character: </strong><span id="charactersName"> </span></p>
+                <!--<p><strong>Learn more about <span id="moreInfoName"> </span>:</strong></p><br>
+                <span id="charactersBio"> </span>-->
+            </div>
+
+            <div id="meme-image-share" class="col-md-6 offset-md-3 text-center">
+                <!--Dynamically append single photo with class attribute of 'col-12'-->
+            </div>
+        </div>
+
+        
+            <div id="meme-text-share" class="col-md-6 offset-md-3 text-center respond-text">
+
+            <!--Add user generated meme text to be displayed in this div-->
+            </div>
+            
+            <div id="meme-URL-div" class="col-12 text-center">
+                <!-- ***The text field to hold unique meme URL within the value attribute-->
+                <input type="text" value="" id="meme-URL" style="width:60%">
+
+                <!-- *** Need to generate function The button used to copy the unique meme URL -->
+                <!--function myFunction() {
+                    /* Get the text field */
+                    var copyText = document.getElementById("myInput");
+                  
+                    /* Select the text field */
+                    copyText.select();
+                  
+                    /* Copy the text inside the text field */
+                    document.execCommand("copy");
+                  
+                    /* Alert the copied text */
+                    alert("Copied the text: " + copyText.value);
+                  }-->
+                <button id="copy-url">Copy URL</button>
+            </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+    <script src="assets/javascript/md5.js"></script>
+    <script src="assets/javascript/marvelapi.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
+    <script src="assets/javascript/speakeasy.js"></script>
+    <script src="assets/javascript/logic.js"></script>
+</body>
+
+</html>

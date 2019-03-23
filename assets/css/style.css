@@ -1,0 +1,68 @@
+.jumbotron {
+    padding: 0px;
+    background-color: #ed1d24;
+    margin-top: 1%;
+}
+
+img.clickable {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+#refresh {
+    margin-bottom: 15px;
+    background-color: #ed1d24;
+    color: white;
+}
+
+#refresh:hover {
+    background-color: #ca1e24;
+    color: yellow;
+}
+
+
+#meme-URL-div {
+    margin-bottom: 5%;
+}
+
+#charactersName {
+    font-family: 'Michroma', sans-serif;
+}
+
+#meme-text-share {
+    width: 100%;
+    font-family: 'Rubik Mono One', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    position: relative;
+    top: -150px;
+    font-size: 1.5vw;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#offset-image {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 2%;
+}
+
+#photo-to-edit {
+    margin-bottom: 1%; 
+}
+
+@media screen and (min-width: 768px) {
+    div.respond-text {
+      font-size: 1vw;
+    }
+  }
+  
+@media screen and (max-width: 767px) {
+    div.respond-text {
+      font-size: 2.5vw;
+    }
+}

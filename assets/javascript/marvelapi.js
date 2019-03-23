@@ -45,3 +45,5 @@ function getRandomMarvelCharacters(charactersToretrieve) {
         displayCharactersOnPage();
     });
 }
+
+
